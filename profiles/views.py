@@ -26,6 +26,8 @@ class ProfileList(generics.ListAPIView):
     filterset_fields = [
         # profiles who follow a given profile
         'owner__following__followed__profile',
+        # profiles who are followed by a given profile
+        'owner__followed__owner__profile',
     ]
 
     ordering_fields = [
