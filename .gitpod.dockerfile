@@ -18,7 +18,7 @@ ENV PATH=$PATH:/home/gitpod/.nvm/versions/node/v${NODE_VERSION}/bin
 ### Python ###
 USER gitpod
 RUN sudo install-packages python3-pip
-ENV PYTHON_VERSION 3.12.2
+ENV PYTHON_VERSION 3.9.18
 
 ENV PATH=$HOME/.pyenv/bin:$HOME/.pyenv/shims:$PATH
 RUN curl -fsSL https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash \
