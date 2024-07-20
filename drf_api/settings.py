@@ -66,7 +66,10 @@ SECRET_KEY = 'django-insecure-6wb#ip0z2!i%o*pqxqwu4wmwrn)l_y!dnzo_k=#f*@%ttv2e!o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-blahosyl-djangorestfram-nycmsfgenk0.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = [
+    '8000-blahosyl-djangorestfram-nycmsfgenk0.ws.codeinstitute-ide.net',
+    'drl-walkthough-6ebc76335062.herokuapp.com'
+    ]
 
 
 # Application definition
