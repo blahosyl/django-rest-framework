@@ -34,7 +34,7 @@ SECRET_KEY = 'django-insecure-6wb#ip0z2!i%o*pqxqwu4wmwrn)l_y!dnzo_k=#f*@%ttv2e!o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-blahosyl-djangorestfram-w7gvreaobz6.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-blahosyl-djangorestfram-nycmsfgenk0.ws.codeinstitute-ide.net']
 
 
 # Application definition
@@ -52,6 +52,11 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework.authtoken',
     'dj_rest_auth',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'dj_rest_auth.registration',
     # self-written apps
     'comments',
     'followers',
