@@ -71,6 +71,7 @@ ALLOWED_HOSTS = [
     'drl-walkthough-6ebc76335062.herokuapp.com'
     ]
 
+# CLIENT_ORIGIN is the front-end app's URL in PROD
 if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
         os.environ.get('CLIENT_ORIGIN')
@@ -80,6 +81,8 @@ else:
         r"^https://.*\.codeinstitute-ide\.net$",
     ]
 
+# Enable sending cookies in cross-origin requests 
+# so that users can get authentication functionality
 CORS_ALLOW_CREDENTIALS = True
 
 # Application definition
