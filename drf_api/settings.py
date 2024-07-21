@@ -51,6 +51,8 @@ JWT_AUTH_SECURE = True
 JWT_AUTH_COOKIE = 'my-app-auth'
 # refresh token
 JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
+# allow front end and back end deployed to different platforms
+JWT_AUTH_SAMESITE = 'None'
 
 # override default serializer
 REST_AUTH_SERIALIZERS = {
