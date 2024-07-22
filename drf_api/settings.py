@@ -69,7 +69,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
-    '8000-blahosyl-djangorestfram-nycmsfgenk0.ws.codeinstitute-ide.net',
+    os.environ.get('ALLOWED_HOST'),
     'drl-walkthough-6ebc76335062.herokuapp.com'
     ]
 
