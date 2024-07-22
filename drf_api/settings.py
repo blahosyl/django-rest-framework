@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import os
+import re
 import dj_database_url
 
 if os.path.exists('env.py'):
@@ -78,9 +78,15 @@ if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
         os.environ.get('CLIENT_ORIGIN')
     ]
-else:
+# in case GitPod rotates the URL: 
+if 'CLIENT_ORIGIN_DEV' in os.environ:
+    # extract uniquqe part of GitPod preview URL
+    extracted_url = re.match(
+        r'^.+-', os.environ.get('CLIENT_ORIGIN_DEV', ''), re.IGNORECASE
+    ).group(0)
     CORS_ALLOWED_ORIGIN_REGEXES = [
-        r"^https://.*\.codeinstitute-ide\.net$",
+        # include uniquqe part of GitPod preview URL in regex
+        rf"{extracted_url}\.ws\.codeinstitute-ide\.net$",
     ]
 
 # Enable sending cookies in cross-origin requests 
