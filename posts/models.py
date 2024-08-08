@@ -31,8 +31,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
     image = models.ImageField(
-        upload_to='images/', default='../default_post_w2n3ng', blank=True, 
-        null=True
+        upload_to='images/', blank=True, null=True
     )
     image_filter = models.CharField(
         max_length=32, choices=image_filter_choices, default='normal'
